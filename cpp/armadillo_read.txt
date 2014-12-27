@@ -1,0 +1,9 @@
+The file structure is as follows:
+~/Documents/mycode/the9shai/cpp/
+
+I have unzipped the armadillo package to 
+~/Documents/mycode/armadillo-4.550.4/
+and made a link 
+~/Documents/mycode/armadillo_current -> ./armadillo-4.550.4
+which should point to the current armadillo folder
+
