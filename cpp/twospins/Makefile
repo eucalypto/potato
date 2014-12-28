@@ -8,13 +8,14 @@ CXX=g++
 ## When using the Sun Studio compiler
 
 
-ARMA_INCLUDE_FLAG = -I ../../../armadillo_current/include
+ARMA_INCLUDE_FLAG = -I ../../../armadillo_current/include -L ../../../OpenBLAS/
 ## If you've installed Armadillo's headers manually, you may need to tell the compiler where they are.
 ## For example, change ../include to /usr/local/include
 
 
 #LIB_FLAGS = -lblas -llapack 
-LIB_FLAGS = -lopenblas -llapack 
+#LIB_FLAGS = -lopenblas -llapack 
+LIB_FLAGS = -lopenblas
 #LIB_FLAGS = -framework Accelerate
 #LIB_FLAGS = -library=sunperf
 
