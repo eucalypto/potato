@@ -1,0 +1,36 @@
+#! /bin/bash
+
+# this script converts the date format in filenames from "2015_01_15"
+# to "2015-01-15", which is the correct way of formatting dates
+# according to ISO 8601
+
+# Beware! it will search for strings like "2012_11_23" and replace
+# them with "2012-11-23" regardless of where this string is in the
+# filename or what is in front and after it. So this will transform :
+# 10233_23_34 -> 10233-23-34
+# 2033_02_12348724 -> 2033-02-12348724
+# 2304972356234_08_23412434 -> 2304972356234-08-23412434
+
+
+
+for filename in *
+do
+  newfilename=""
+
+# sed is used to search for the date pattern and replace the
+# underscores with dashes. Here @ is used as delimeter instead of / in
+# the sed script to make the code easier to read. This searches for
+# strings like 4digits_2digits_2digits and groups the three groups of
+# digits with \(group\) to be used for the replacement string with \1.
+# https://www.gnu.org/software/sed/manual/sed.html#Regular-Expressions
+  newfilename=$(sed -n \
+     's@\([0-9]\{4\}\)_\([01][0-9]\)_\([0-3][0-9]\)@\1-\2-\3@gp'\
+      <<< "$filename")
+
+  [[ -z "$newfilename" ]] && continue
+  
+  echo "\"$filename\" was changed to \"$newfilename\""
+#  mv "$filename" "$newfilename"
+
+done
+
