@@ -27,10 +27,12 @@ do
      's@\([0-9]\{4\}\)_\([01][0-9]\)_\([0-3][0-9]\)@\1-\2-\3@gp'\
       <<< "$filename")
 
+# Test if $newfilename is empty. If it is, then sed didn't find any
+# pattern and the file doesn't have to be replaced. Go to next file.
   [[ -z "$newfilename" ]] && continue
   
   echo "\"$filename\" was changed to \"$newfilename\""
-#  mv "$filename" "$newfilename"
+  mv "$filename" "$newfilename"
 
 done
 
