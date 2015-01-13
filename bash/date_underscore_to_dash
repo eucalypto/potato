@@ -11,6 +11,10 @@
 # 2033_02_12348724 -> 2033-02-12348724
 # 2304972356234_08_23412434 -> 2304972356234-08-23412434
 
+# If there is already a file with the new filename, this script checks
+# if this file is empty. If this file is not empty, an error message
+# is displayed. Otherwise this file is overwritten.
+
 
 
 for filename in *
@@ -31,8 +35,20 @@ do
 # pattern and the file doesn't have to be replaced. Go to next file.
   [[ -z "$newfilename" ]] && continue
   
-  echo "\"$filename\" was changed to \"$newfilename\""
-  mv "$filename" "$newfilename"
+
+# Now we want to check, if there is already a non-empty file with the
+# new filename. If so, it is not overwritten but an error message is
+# displayed.
+  if [[ -s $newfilename ]] # -s FILE: True if file exists and is not
+                           # empty.
+  then
+      echo "Error:\"$filename\" could not be renamed because\
+ \"$newfilename\" already exists and is not empty" >&2
+  else
+      mv "$filename" "$newfilename"
+      echo "\"$filename\" -> \"$newfilename\""      
+  fi
+
 
 done
 
