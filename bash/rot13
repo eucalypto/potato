@@ -1,0 +1,13 @@
+#! /bin/bash
+
+# This script does the ceasar shiffre with a shift of 13
+# characters. This is also called rot13. The special property is that
+# using it twice gives the original text. So it is usable to encrypt
+# and decrypt.
+
+# This script reads from stin and writes to stin. So you have to use
+# redirections '< inputfile' and '> outputfile' to read and write from
+# files
+# rot 13 < secret_message.txt > encrypted_secret_message.txt
+
+cat | tr A-Za-z N-ZA-Mn-za-m 
