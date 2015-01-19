@@ -28,8 +28,9 @@ do
 # digits with \(group\) to be used for the replacement string with \1.
 # https://www.gnu.org/software/sed/manual/sed.html#Regular-Expressions
   newfilename=$(sed -n \
-     's@^\(.*_\)vom_\([0-3][0-9]\).\([01][0-9]\).\([0-9]\{4\}\)\(.*\)$@\4-\3-\2_\1\5@p'
+     's@^\(.*_\)vom_\([0-3][0-9]\)\.\([01][0-9]\)\.\([0-9]\{4\}\)\(.*\)$@\4-\3-\2_\1\5@p'\
       <<< "$filename")
+
 
 # Test if $newfilename is empty. If it is, then sed didn't find any
 # pattern and the file doesn't have to be replaced. Go to next file.
@@ -45,7 +46,7 @@ do
       echo "Error:\"$filename\" could not be renamed because\
  \"$newfilename\" already exists and is not empty" >&2
   else
-#      mv "$filename" "$newfilename"
+      mv "$filename" "$newfilename"
       echo "\"$filename\" -> \"$newfilename\""      
   fi
 
