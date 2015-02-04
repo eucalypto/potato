@@ -19,6 +19,9 @@ LIB_FLAGS = -lopenblas
 #LIB_FLAGS = -framework Accelerate
 #LIB_FLAGS = -library=sunperf
 
+Static_flag = -static
+# use this flag to link libraries statically, not dynamically
+
 ## NOTE: on Ubuntu and Debian based systems you may need to add -lgfortran to LIB_FLAGS
 ## NOTE: if you're using Mac OS, use the line with -framework Accelerate 
 ## NOTE: if you're using the Sun Studio compiler, use the line with -library=sunperf
@@ -51,7 +54,7 @@ OPT = -O1
 ## Not recommended unless your code has been first thoroughly tested!
 
 
-CXXFLAGS = $(ARMA_INCLUDE_FLAG) $(DEBUG) $(FINAL) $(OPT) $(EXTRA_OPT) 
+CXXFLAGS = $(Static_flag) $(ARMA_INCLUDE_FLAG) $(DEBUG) $(FINAL) $(OPT) $(EXTRA_OPT) 
 
 all: spinb
 
