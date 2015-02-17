@@ -15,11 +15,13 @@ ARMA_INCLUDE_FLAG = -I ../../../armadillo_current/include -L ../../../OpenBLAS/
 
 #LIB_FLAGS = -lblas -llapack 
 #LIB_FLAGS = -lopenblas -llapack 
-LIB_FLAGS = -lopenblas
+LIB_FLAGS = -lopenblas 
 #LIB_FLAGS = -framework Accelerate
 #LIB_FLAGS = -library=sunperf
 
-Static_flag = -static
+LINK_FLAGS = -Wl,-rpath=../../../OpenBLAS/
+
+#Static_flag = -static
 # use this flag to link libraries statically, not dynamically
 
 ## NOTE: on Ubuntu and Debian based systems you may need to add -lgfortran to LIB_FLAGS
@@ -59,7 +61,7 @@ CXXFLAGS = $(Static_flag) $(ARMA_INCLUDE_FLAG) $(DEBUG) $(FINAL) $(OPT) $(EXTRA_
 all: hydrob
 
 hydrob: hydrob.cpp
-	$(CXX) $(CXXFLAGS)  -o $@.out  $<  $(LIB_FLAGS)
+	$(CXX) $(CXXFLAGS)  -o $@.out  $<  $(LIB_FLAGS) $(LINK_FLAGS)
 
 
 .PHONY: clean

@@ -12,7 +12,7 @@ main(int argc, char** argv)
   
   double Bmin = 0;
   double Bmax = 10;
-  double Bstep = 0.01;
+  double Bstep = 1.0;
 
   mat H1 = zeros<mat>(4,4);
   H1(1,2) = 1.0/6000;
