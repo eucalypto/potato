@@ -56,13 +56,13 @@ OPT = -O1
 
 CXXFLAGS = $(Static_flag) $(ARMA_INCLUDE_FLAG) $(DEBUG) $(FINAL) $(OPT) $(EXTRA_OPT) 
 
-all: spinb
+all: hydrob
 
-spinb: spinb.cpp
+hydrob: hydrob.cpp
 	$(CXX) $(CXXFLAGS)  -o $@.out  $<  $(LIB_FLAGS)
 
 
 .PHONY: clean
 
 clean:
-	rm -f spinb.out
+	rm -f hydrob.out
