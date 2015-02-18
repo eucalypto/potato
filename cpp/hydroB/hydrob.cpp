@@ -1,5 +1,8 @@
 #include <iostream>
 #include <armadillo>
+#include <vector>
+#include "../../../gnuplott/gnuplott.h"
+
 
 using namespace std;
 using namespace arma;
@@ -11,8 +14,8 @@ main(int argc, char** argv)
   cout << "Armadillo version: " << arma_version::as_string() << endl;
   
   double Bmin = 0;
-  double Bmax = 10;
-  double Bstep = 1.0;
+  double Bmax = 3;
+  double Bstep = 0.01;
 
   mat H1 = zeros<mat>(4,4);
   H1(1,2) = 1.0/6000;
@@ -40,17 +43,29 @@ main(int argc, char** argv)
   Hdiag2.print("Hdiag2:");
   
   mat eigs;
-  colvec Bs;
+  vector<double> Bs;
   for(double B = Bmin; B <= Bmax; B += Bstep)
   {
     mat H = H1 + 0.5 * B * Hdiag1 + Hdiag2;
     vec eigval = eig_sym(H);
-    eigval.print("Energies:");
+    eigs = join_rows(eigs,eigval);
+    Bs.push_back(B);
   }
       
-    
 
+  gnuplott plotting;
+
+
+  for(int j = 0; j < 4; j++)
+  {
+    for(int i = 0; i < Bs.size(); i++)
+    {
+      plotting.addPoint( Bs[i], eigs(j,i) );
+    }
+    plotting.endoffunction();
+  }
   
+  plotting.plot();
   
   return 0;
 }

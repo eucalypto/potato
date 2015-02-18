@@ -21,6 +21,8 @@ LIB_FLAGS = -lopenblas
 
 LINK_FLAGS = -Wl,-rpath=../../../OpenBLAS/
 
+GNUPLOTT = ../../../gnuplott/gnuplott.cpp
+
 #Static_flag = -static
 # use this flag to link libraries statically, not dynamically
 
@@ -61,10 +63,13 @@ CXXFLAGS = $(Static_flag) $(ARMA_INCLUDE_FLAG) $(DEBUG) $(FINAL) $(OPT) $(EXTRA_
 all: hydrob
 
 hydrob: hydrob.cpp
-	$(CXX) $(CXXFLAGS)  -o $@.out  $<  $(LIB_FLAGS) $(LINK_FLAGS)
+	$(CXX) $(CXXFLAGS)  -o $@.out  $< $(GNUPLOTT) $(LIB_FLAGS) $(LINK_FLAGS)
 
 
-.PHONY: clean
+.PHONY: clean, cleanplot
 
 clean:
 	rm -f hydrob.out
+
+cleanplot:
+	rm -f gnu*.txt plotting.txt
