@@ -14,8 +14,8 @@ main(int argc, char** argv)
   cout << "Armadillo version: " << arma_version::as_string() << endl;
   
   double Bmin = 0;
-  double Bmax = 3;
-  double Bstep = 0.01;
+  double Bmax =  0.0015;
+  double Bstep = 0.000001;
 
   mat H1 = zeros<mat>(4,4);
   H1(1,2) = 1.0/6000;
