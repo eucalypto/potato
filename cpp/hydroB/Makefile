@@ -66,10 +66,10 @@ hydrob: hydrob.cpp
 	$(CXX) $(CXXFLAGS)  -o $@.out  $< $(GNUPLOTT) $(LIB_FLAGS) $(LINK_FLAGS)
 
 
-.PHONY: clean, cleanplot
+.PHONY: clean, gnuclean
 
 clean:
 	rm -f hydrob.out
 
-cleanplot:
+gnuclean:
 	rm -f gnu*.txt plotting.txt
