@@ -1,0 +1,15 @@
+#! /bin/bash
+# this is a bash script!
+
+
+# in the following lines I have tried to use the (( )) mathematical
+# expression to construct a C-like for loop and manipulate the loop
+# integer i inside the loop. This could come in handy if you want to
+# run more loops than foreseen. But you have to take care of infinite
+# looping. There should also be a while loop construct
+num=1
+for (( i = 0; i < 10; i++ ))
+do
+  (( num < 10 ? ( num++ && i-- )  : 0 ))
+  echo $i $num
+done
