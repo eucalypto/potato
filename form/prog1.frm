@@ -1,4 +1,11 @@
 Symbols a,b,c,d;
+Local F = (a+b+c+1)^6;
+id a = -b+d-1;
+Print "%t";
+Print;
+.end
+
+Symbols a,b,c,d;
 On HighFirst;
 Local F = a+b+c+d;
 .sort
