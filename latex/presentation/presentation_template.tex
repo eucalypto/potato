@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 
 
-
+\setbeamertemplate{footline}[frame number]
 
 
 
@@ -22,7 +22,7 @@
 % Here the Document actually begins
 \begin{document}
 
-\titlepage
+\frame{\titlepage}
 
 \begin{frame}
   \frametitle{Outline}
@@ -43,15 +43,30 @@
    \item We would have to invent technology to replace convenient magic.
    \item Fireworks would be much less imressive.
  \end{itemize}
+
+ \begin{block}{Things that are better with Magic}
+   \begin{itemize}
+     \item Fireworks
+     \item Fights
+     \item Wizard Duels
+   \end{itemize}
+ \end{block}
 \end{frame}
 
 
 \begin{frame}
   \frametitle{Rules of Wizard Club}
-  \begin{itemize}
-    \item First Rule: Do not talk about Wizard Club
-    \item Second Rule: Only write about Wizard Club
+  Now with "Effects":
+  \pause
+  \begin{itemize}[<+->]
+    \item  First Rule: Do not talk about Wizard Club
+    \item  Second Rule: Only write about Wizard Club
   \end{itemize}
-  So people in the Future can study our stuff.
+
+
+  \begin{alertblock}<+->{Important Guideline}
+    We want people to not forget what we did. Such that Wizardry
+    always evolves.
+  \end{alertblock}
 \end{frame}
 \end{document}
