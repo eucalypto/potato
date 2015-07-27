@@ -1,4 +1,6 @@
 <?php
+// this script is a trying of the things I learn from:
+// http://onlinephpguide.com/
 echo "Hello, this is me", " and me", "<br />";
 echo $_SERVER['HTTP_USER_AGENT'], "<br />";
 $user_name = "Gandalf the Grey";
@@ -37,9 +39,9 @@ switch($user_name)
 
 // arrays:
 $friends = array ("Gandalf", "Legolas", "Gimli", "Aragorn");
-print_r ($friends) ;
+print_r ($friends); // printing arrays
 echo "<br />";
-echo $friends[1];
+echo $friends[1]; // accessing a certain entry in array
 echo "<br />";
 
 // loops:
@@ -55,13 +57,49 @@ echo "<br />";
 
 // iterate through array elements with foreach():
 $emails = array("gandalf@gmail.com", "legolas@yahoo.com", "gimlixxx@web.de");
-foreach ($emails as $value) {
-  echo "Processing ". $value."<br />";
+foreach ($emails as $value)
+{
+  echo "Processing ". $value . "<br />";
 }
 // and with associative arrays:
 $infos = array("Name" => "Legolas", "Age" => "823", "Adress" => "Nowhere street, 77");
-foreach ($infos as $key => $value) {
+foreach ($infos as $key => $value) 
+{
   echo "$key is $value <br />";
 }
+
+// definition of a function
+function my_mult($num1, $num2)
+{
+  echo "This function returns the product of $num1 and $num2";
+  echo "<br />";
+  return $num1 * $num2;
+}
+
+// call of my function
+echo my_mult(3, 4);
+$var_mult1 = 3;
+$var_mult2 = 5;
+$var_mult_res = my_mult($var_mult1, $var_mult2);
+echo $var_mult_res;
+
+
+// now some constants, that cannot change during execution:
+define("CONST1", "This thing cannot change!");
+define("CONST2", "I am immovable like the flow of time.");
+
+echo constant("CONST1") . "<br />";
+echo constant("CONST2") . "<br />";
+
+// date function
+echo "Today is", date("D, d M Y"), "<br />";
+echo "and there are ", 365-date("z"), "days left of this year", "<br />";
+echo "And this is today in the only viable time format:", date("Y-m-d"), "<br />";
+
+// filters 
+
+$int = '1234';
+echo filter_var($int, FILTER_VALIDATE_INT);
+
 
 ?>
