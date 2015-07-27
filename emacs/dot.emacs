@@ -12,7 +12,7 @@
 ;; (global-set-key (kbd "C-c u") 'uncomment-region)
 
 (if window-system
-	(set-frame-size (selected-frame) 80 60))
+	(set-frame-size (selected-frame) 80 50))
 
 
 
@@ -166,6 +166,11 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
+
+;; Enable web-mode for php files
+;; web-mode can be found on melpa
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
