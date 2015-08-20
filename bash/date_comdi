@@ -35,7 +35,7 @@ do
 # Test if $newfilename is empty. If it is, then sed didn't find any
 # pattern and the file doesn't have to be replaced. Go to next file.
   [[ -z "$newfilename" ]] && continue
-  
+
 
 # Now we want to check, if there is already a non-empty file with the
 # new filename. If so, it is not overwritten but an error message is
@@ -47,9 +47,8 @@ do
  \"$newfilename\" already exists and is not empty" >&2
   else
       mv "$filename" "$newfilename"
-      echo "\"$filename\" -> \"$newfilename\""      
+      echo "\"$filename\" -> \"$newfilename\""
   fi
 
 
 done
-

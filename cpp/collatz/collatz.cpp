@@ -14,7 +14,7 @@ int main()
 
   vector<unsigned long long> result = collatz(startnumber);
   cout << "The sequence is " << result.size() << " long." << endl;
-  
+
   return 0;
 }
 

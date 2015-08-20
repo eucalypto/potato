@@ -21,7 +21,7 @@ int main(){
   double approx_old;
 
 
-  
+
   do {
     approx_old = approx;
     approx = 0.5 * (approx + a/approx);

@@ -17,7 +17,7 @@
 
 
 ;; automatically enables "electric-pair-mode" in shell-script buffers
-;; this way you don't have to select "Sh-Script"->;; "Insert braces and 
+;; this way you don't have to select "Sh-Script"->;; "Insert braces and
 ;; quotes in pairs"
 (add-hook 'sh-mode-hook 'electric-pair-mode)
 
@@ -33,7 +33,7 @@
 ;; Load CEDET.
 ;; See cedet/common/cedet.info for configuration details.
 ;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
-;; CEDET component (including EIEIO) gets activated by another 
+;; CEDET component (including EIEIO) gets activated by another
 ;; package (Gnus, auth-source, ...).
 ;;(load-file "~/Dropbox/emacs/cedet-1.1/common/cedet.el")
 
@@ -87,7 +87,7 @@
 ;;Sets thecursor to white, because auto-complete fucks it when
 ;; having a black background
 ;;(set-cursor-color "white")
- 
+
 
 ;; in C mode, delete hungrily
 (setq c-hungry-delete-key t)
@@ -114,7 +114,7 @@
 
 ;;(setq line-move-visual nil)
 
-;;Dafür da, dass am Bildende umgebrochen 
+;;Dafür da, dass am Bildende umgebrochen
 ;;(global-visual-line-mode 1)
 
 ;;Weiss-Schwarz statt Schwarz-Weiss

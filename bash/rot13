@@ -10,4 +10,4 @@
 # files
 # rot 13 < secret_message.txt > encrypted_secret_message.txt
 
-cat | tr A-Za-z N-ZA-Mn-za-m 
+cat | tr A-Za-z N-ZA-Mn-za-m

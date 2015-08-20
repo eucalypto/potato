@@ -19,4 +19,4 @@ https://help.ubuntu.com/community/Custom%20keyboard%20layout%20definitions
 I deleted the *.xkm files in /var/lib/xkb/
 
 Then after a logout and login it worked! And it still works after a
-reboot. 
+reboot.

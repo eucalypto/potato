@@ -13,9 +13,9 @@ ARMA_INCLUDE_FLAG = -I ../../../armadillo_current/include -L ../../../OpenBLAS/
 ## For example, change ../include to /usr/local/include
 
 
-#LIB_FLAGS = -lblas -llapack 
-#LIB_FLAGS = -lopenblas -llapack 
-LIB_FLAGS = -lopenblas 
+#LIB_FLAGS = -lblas -llapack
+#LIB_FLAGS = -lopenblas -llapack
+LIB_FLAGS = -lopenblas
 #LIB_FLAGS = -framework Accelerate
 #LIB_FLAGS = -library=sunperf
 
@@ -27,7 +27,7 @@ GNUPLOTT = ../../../gnuplott/gnuplott.cpp
 # use this flag to link libraries statically, not dynamically
 
 ## NOTE: on Ubuntu and Debian based systems you may need to add -lgfortran to LIB_FLAGS
-## NOTE: if you're using Mac OS, use the line with -framework Accelerate 
+## NOTE: if you're using Mac OS, use the line with -framework Accelerate
 ## NOTE: if you're using the Sun Studio compiler, use the line with -library=sunperf
 
 
@@ -58,7 +58,7 @@ OPT = -O1
 ## Not recommended unless your code has been first thoroughly tested!
 
 
-CXXFLAGS = $(Static_flag) $(ARMA_INCLUDE_FLAG) $(DEBUG) $(FINAL) $(OPT) $(EXTRA_OPT) 
+CXXFLAGS = $(Static_flag) $(ARMA_INCLUDE_FLAG) $(DEBUG) $(FINAL) $(OPT) $(EXTRA_OPT)
 
 all: hydrob
 

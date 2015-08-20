@@ -12,7 +12,7 @@ int
 main(int argc, char** argv)
 {
   cout << "Armadillo version: " << arma_version::as_string() << endl;
-  
+
   double Bmin = 0;
   double Bmax =  0.0015;
   double Bstep = 0.000001;
@@ -41,7 +41,7 @@ main(int argc, char** argv)
      << 1.0/12000;
   Hdiag2.diag() = q2;
   Hdiag2.print("Hdiag2:");
-  
+
   mat eigs;
   vector<double> Bs;
   for(double B = Bmin; B <= Bmax; B += Bstep)
@@ -51,7 +51,7 @@ main(int argc, char** argv)
     eigs = join_rows(eigs,eigval);
     Bs.push_back(B);
   }
-      
+
 
   gnuplott plotting;
 
@@ -64,9 +64,8 @@ main(int argc, char** argv)
     }
     plotting.endoffunction();
   }
-  
+
   plotting.plot();
-  
+
   return 0;
 }
-

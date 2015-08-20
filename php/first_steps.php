@@ -49,7 +49,7 @@ $var = 0;
 while ($var < 10)
 {
   echo "Var is: ", $var;
-  echo "<br />"; 
+  echo "<br />";
   $var++;
 }
 
@@ -63,7 +63,7 @@ foreach ($emails as $value)
 }
 // and with associative arrays:
 $infos = array("Name" => "Legolas", "Age" => "823", "Adress" => "Nowhere street, 77");
-foreach ($infos as $key => $value) 
+foreach ($infos as $key => $value)
 {
   echo "$key is $value <br />";
 }
@@ -96,7 +96,7 @@ echo "Today is", date("D, d M Y"), "<br />";
 echo "and there are ", 365-date("z"), "days left of this year", "<br />";
 echo "And this is today in the only viable time format:", date("Y-m-d"), "<br />";
 
-// filters 
+// filters
 
 $int = '1234';
 echo filter_var($int, FILTER_VALIDATE_INT);
