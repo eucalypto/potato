@@ -37,7 +37,4 @@
   'ctrl-c n': 'editor:toggle-line-comments'
 
 'body':
-  'ctrl-x ctrl-s': 'core:save'
-
-'atom-text-editor:not([mini])':
-  'alt-k': 'editor:delete-line'
+  'alt-k': 'core:cut'
