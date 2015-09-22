@@ -38,3 +38,6 @@
 
 'body':
   'alt-k': 'core:cut'
+
+'atom-workspace':
+  'ctrl-c ctrl-c': 'make-runner:run'
