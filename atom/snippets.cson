@@ -16,3 +16,16 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
+
+
+# Snippets for LaTeX:
+# The standart snippets are in the following file:
+# ~/.atom/packages/language-latex/snippets/language-latex.cson
+'.text.tex.latex':
+  'Integral measure d':
+    'prefix': 'dd'
+    'body': '\\\\mathrm{d}$1\\\\,$0'
+
+  'frac{}{}':
+    'prefix': 'fr'
+    'body': '\\\\frac{$0}{}'
