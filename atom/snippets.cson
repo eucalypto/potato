@@ -24,7 +24,7 @@
 '.text.tex.latex':
   'Integral measure d':
     'prefix': 'dd'
-    'body': '\\\\mathrm{d}$1\\\\,$0'
+    'body': '\\\\mathrm{d}$1\\\\, $0'
 
   'frac{}{}':
     'prefix': 'fr'
