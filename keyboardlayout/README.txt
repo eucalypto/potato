@@ -20,3 +20,18 @@ I deleted the *.xkm files in /var/lib/xkb/
 
 Then after a logout and login it worked! And it still works after a
 reboot.
+
+
+Act 2:
+
+Now I want to plug in an apple keyboard with a US layout. This is
+praticularly bad for Neo2 usage. So it took me a long time to find a
+solution.
+
+I wanted to make a new custom layout. You have to declare it somewhere
+that the system finds it. But it didn't work. So I just copied the key
+definitions from the Neo2 definitons in the "de" file to the part of
+German(Romanian). For the level modifier key, I added some entries in
+"level5" which also sits in /usr/share/X11/xkb/symbols/. After
+overwriting the existing files with these two (de, level5), deleting the
+.xkm files and rebooting, it works now.
