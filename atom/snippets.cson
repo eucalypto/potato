@@ -24,8 +24,12 @@
 '.text.tex.latex':
   'Integral measure d':
     'prefix': 'dd'
-    'body': '\\\\mathrm{d}$1\\\\, $0'
+    'body': '\\\\mathrm{d}$0\\\\, '
 
   'frac{}{}':
     'prefix': 'fr'
     'body': '\\\\frac{$0}{}'
+
+  'Equation':
+    'prefix': 'eq'
+    'body': '%\n\\\\begin{equation}\n\t$0\n\\\\end{equation}\n%'
