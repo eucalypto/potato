@@ -41,3 +41,9 @@
 
 'atom-workspace':
   'ctrl-c ctrl-c': 'make-runner:run'
+
+'.platform-linux atom-text-editor':
+  'ctrl-b': 'bookmarks:toggle-bookmark'
+
+'atom-text-editor':
+  'ctrl-n': 'bookmarks:jump-to-next-bookmark'
