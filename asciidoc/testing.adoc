@@ -1,0 +1,184 @@
+= Testing AsciiDoc Document
+Me <me@my-server.com>
+2016-03-03
+:appversion: 1.0.0_blabla
+:toc:
+:numbered:
+
+Preamble paragraph.
+
+Next preamble paragraph.
+
+Next?
+
+== First Paragraph
+This is a paragraph that consists of several sentences. These sentences
+are written one after the other. This is necessary because our writing
+language is one-dimensional. This means one word comes after another and
+before a third. The same goes for letters. You can write a whole book in
+one line of text as easy as you can write each letter of this book on
+one pearl and put them on exactly one string.
+
+I guess this string would be much heavier than the printed book itself.
+
+Roses are red, +
+Trees are green.
+
+And the current appversion is {appversion}
+
+== Special Constructs
+
+NOTE: Not breathing for 5 minutes causes death in 7 out of 9 adults.
+
+IMPORTANT: Breathe at least 3 times per minute!
+
+TIP: If it is cold outside, put on a jacket.
+
+CAUTION: I have no idea, why I would need "CAUTION"
+
+WARNING: This is a warning!
+
+The next word is *bold*.
+
+_italic phrase_
+
+__i__talic le__tt__ers
+
+*bold phrase*
+
+**b**old le**tt**ers
+
+*_bold italic phrase_*
+
+**__b__**old italic le**__tt__**ers
+
+`monospace phrase` and le``tt``ers
+
+`_monospace italic phrase_` and le``__tt__``ers
+
+`*monospace bold phrase*` and le``**tt**``ers
+
+`*_monospace bold italic phrase_*` and le``**__tt__**``ers
+
+This text is "quoted" with double quotes and 'this' is quoted with
+single quotes.
+
+And this is a list of things:
+
+.Name of this list
+* Car
+* Dog
+* Fish
+
+Or the same thing with dashes:
+
+.Another list:
+- Go bying groceries
+- Call your mom
+- Clean your room
+
+.Nested list
+* level1
+** level2
+*** level3
+**** level4
+*** level3
+**** level4
+***** level5
+
+.Numbered list
+. Stars
+  .. Sun
+  .. Alpha Centauri
+. Planets
+  - Earth
+  - Mars
+. Continents
+. Mountains
+. Buildings
+. Cars
+. People
+. Books
+. Insects
+. Bacteria
+. Molecules
+. Atoms
+
+.Label
+[horizontal]
+Ice:: The solid form of water.
+
+Water:: The liquid form of water. If you cool it down slowly enough and
+  don't stir it, you can cool it down to below zero degrees Celsius
+  without freezing.
+
+Steam:: The gasidial form of water.
+
+----
+This is some text
+and
+~$ echo "Sudo is the best"
+----
+
+This website (http://www.google.com) is very useful.
+http://wolframalpha.com[This website] is also useful.
+
+
+== Blocks
+
+Here some blocks that you can use.
+
+.Listing block (code block)
+----
+This is a listing block
+It preserves the
+linebreaks
+in
+your block.
+----
+
+////
+Comment block, that is not printed in the output.
+////
+
+.Tilte
+****
+Sidebar
+****
+
+
+.Source code block (listing block) for C++
+[source, c++]
+----
+a = 4;
+for(int i = 0; i <= 65; i++)
+{
+  cout << "hello" << i;
+}
+----
+
+
+.Listing block for bas
+[source, bash]
+----
+echo "hello" | grep "here"
+
+i=5
+while (( i <= 5 )); # <1>
+do
+  echo "$i is smaller as five." # <2>
+  ((i++))
+----
+<1> Make a lot of loops
+<2> Print a message
+
+.Example table
+|===
+|Name         |Group
+
+|bla          |Firefox
+
+|Web browser is a nice and awesome development.
+This is good.
+|blabla
+|===
