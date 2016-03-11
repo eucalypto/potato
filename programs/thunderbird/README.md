@@ -1,3 +1,14 @@
+---
+layout: post
+title: Einrichtung von Googlemail (IMAP) in Thunderbird 3.1.8
+date: '2015-04-27T02:36:00.000-07:00'
+author: eucalypto
+tags:
+- thunderbird
+- gmail
+modified_time: '2015-04-27T02:36:52.039-07:00'
+blogger_orig_url: http://eigentipps.blogspot.com/2015/01/ubuntu-short-tips.html
+---
 [Source](http://eigentipps.blogspot.de/2011/05/einrichtung-von-googlemail-imap-in.html "Permalink to Einrichtung von Googlemail (IMAP) in Thunderbird 3.1.8")
 
 Einrichtung von Googlemail (IMAP) in Thunderbird 3.1.8
