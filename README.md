@@ -1,4 +1,4 @@
-the9shai
-========
+Potato
+======
 
-Mostly useless code
+This is my code repository. It consists of mostly useless code.
