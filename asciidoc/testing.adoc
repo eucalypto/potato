@@ -12,12 +12,18 @@ Next preamble paragraph.
 Next?
 
 == First Paragraph
-This is a paragraph that consists of several sentences. These sentences
+This is a `paragraph` that consists of several sentences. These sentences
 are written one after the other. This is necessary because our writing
 language is one-dimensional. This means one word comes after another and
 before a third. The same goes for letters. You can write a whole book in
 one line of text as easy as you can write each letter of this book on
 one pearl and put them on exactly one string.
+
+----
+for i in $space
+do echo "$i is in space"
+done
+----
 
 I guess this string would be much heavier than the printed book itself.
 
