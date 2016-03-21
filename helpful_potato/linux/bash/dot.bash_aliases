@@ -5,4 +5,6 @@
 alias aptup='sudo apt-get update && sudo apt-get upgrade'
 
 # Git aliases
-alias s='git status'
+alias gis='git status'
+alias gil='git log'
+alias giff='git difftool -y'
