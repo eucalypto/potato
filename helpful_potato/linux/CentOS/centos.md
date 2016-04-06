@@ -1,23 +1,23 @@
 ---
 layout: post
-title: CentOs 7
+title: CentOS 7
 date: '2016-03-15T19:14:32+0100'
 author: eucalypto
 tags:
 - linux
-- CentOS
+- centos
 ---
 
 Miscellaneous tips for CentOS 7
 -------------------------------
 
-###### Git
+#### Git
 
 To have a git server you just have to install `git-daemon`. Now you can
 use the computer as git server with ssh.
 
 
-###### Lighttpd
+#### Lighttpd
 
 [Lighttpd] is a light web server. In CentOS its package is in the [EPEL]
 repository. After installing this package you can run it with
@@ -52,7 +52,7 @@ server.document-root = server_root + "/lighttpd"
 [Lighttpd]: http://www.liberiangeek.net/2014/09/install-lighttpd-webserver-centos-7-php5-mariadb-support/
 [EPEL]: https://wiki.centos.org/de/AdditionalResources/Repositories/https://wiki.centos.org/de/AdditionalResources/Repositories/
 
-###### Baikal
+#### Baikal
 
 Baikal is a php based CalDav and CardDav server. It uses SQLite as
 database. So you need to make sure the following programs are installed:
