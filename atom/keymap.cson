@@ -34,13 +34,13 @@
   'alt-q': 'autoflow:reflow-selection'
 
 'atom-workspace atom-text-editor:not([mini])':
-  'ctrl-c n': 'editor:toggle-line-comments'
+  'ctrl-e n': 'editor:toggle-line-comments'
 
 'body':
   'alt-k': 'core:cut'
 
 'atom-workspace':
-  'ctrl-c ctrl-c': 'make-runner:run'
+  'ctrl-e ctrl-e': 'make-runner:run'
 
 '.platform-linux atom-text-editor':
   'ctrl-b': 'bookmarks:toggle-bookmark'
