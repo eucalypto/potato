@@ -5,8 +5,8 @@ date: '2016-03-15T19:14:32+0100'
 author: eucalypto
 tags:
 - linux
-- CentOS
-- Dropbox
+- centos
+- dropbox
 ---
 
 Install Dropbox in CentOS 7
@@ -41,7 +41,7 @@ This [blog entry][2] describes the problem:
 
 The Package is made for Fedora and Fedora has a different release cycle
 than CentOS. But the package repository configuration of Dropbox
-(`/etc/yum.repos.d/dropbox.repo`) uses the variable `$releasever`, which
+`/etc/yum.repos.d/dropbox.repo` uses the variable `$releasever`, which
 is different for Fedora and CentOS.
 
 To solve this problem you have to replace the line
