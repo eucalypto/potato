@@ -13,6 +13,6 @@ alias la='ls -alFh'
 
 # Git aliases
 alias gis='git status'
-alias gil='git log --show-signature'
+alias gil='git log --show-signature --decorate --graph'
 alias gics='git commit -S'
 alias giff='git difftool -y'
