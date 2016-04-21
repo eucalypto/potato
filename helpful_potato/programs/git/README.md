@@ -19,6 +19,23 @@ If you want to share your code in an open source way,
 helped with the tutorial above.
 
 
+Compare all local branches with remote
+--------------------------------------
+
+If you use more than one branch in git, you may want to keep them also
+backed up in a remote repository. And to keep track of all branches and their relation to the remote ones, there are commands like
+
+```
+git fetch -v
+git branch -v
+```
+
+Linux users may be familiar with this flag `-v`, which stands for
+`verbose`, for many programs. Also here, it makes git list all branches
+and their status compared to remote.
+
+
+
 Change the url (path) of origin
 -------------------------------
 
