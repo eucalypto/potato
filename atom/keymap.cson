@@ -32,9 +32,13 @@
 
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
   'alt-q': 'autoflow:reflow-selection'
+  'ctrl-e': 'unset!' # unsets the keybinding
+
 
 'atom-workspace atom-text-editor:not([mini])':
   'ctrl-e n': 'editor:toggle-line-comments'
+  'ctrl-e f': 'editor:fold-current-row'
+  'ctrl-e u': 'editor:unfold-current-row'
 
 'body':
   'alt-k': 'core:cut'

@@ -25,11 +25,131 @@
   'Integral measure d':
     'prefix': 'dd'
     'body': '\\\\mathrm{d}$0\\\\, '
-
   'frac{}{}':
     'prefix': 'fr'
     'body': '\\\\frac{$0}{}'
-
   'Equation':
     'prefix': 'eq'
     'body': '%\n\\\\begin{equation}\n\t$0\n\\\\end{equation}\n%'
+
+  # Parentheses
+  'left( right)':
+    'prefix': 'lp'
+    'body': '\\\\left( $1 \\\\right) $0'
+  'left[ right]':
+    'prefix': 'lb'
+    'body': '\\\\left[ $1 \\\\right] $0'
+  'left{ right}':
+    'prefix': 'lbr'
+    'body': '\\\\left\\\\{ $0 \\\\right\\\\}'
+
+  # Greek alphabet
+  'delta':
+    'prefix': 'd'
+    'body': '\\\\delta'
+  'partial':
+    'prefix': '\\delta'
+    'body': '\\\\partial'
+  'delta_':
+    'prefix': '\\partial'
+    'body': '\\\\delta'
+  'epsilon':
+    'prefix': 'e'
+    'body': '\\\\epsilon'
+  'varepsilon':
+    'prefix': '\\epsilon'
+    'body': '\\\\varepsilon'
+  'epsilon_':
+    'prefix': '\\varepsilon'
+    'body': '\\\\epsilon'
+  'theta':
+    'prefix': 'q'
+    'body': '\\\\theta'
+  'vartheta':
+    'prefix': '\\theta'
+    'body': '\\\\vartheta'
+  'theta_':
+    'prefix': '\\vartheta'
+    'body': '\\\\theta'
+  'phi':
+    'prefix': 'f'
+    'body': '\\\\phi'
+  'varphi':
+    'prefix': '\\phi'
+    'body': '\\\\varphi'
+  'phi_':
+    'prefix': '\\varphi'
+    'body': '\\\\phi'
+
+  # Mathematical symbols
+  'cdot':
+    'prefix': 'cd'
+    'body': '\\\\cdot'
+  'cdots':
+    'prefix': '\\cdot'
+    'body': '\\\\cdots'
+  'cdot_':
+    'prefix': '\\cdots'
+    'body': '\\\\cdot'
+  'langle':
+    'prefix': 'la'
+    'body': '\\\\langle'
+  'rangle':
+    'prefix': 'ra'
+    'body': '\\\\rangle'
+  'int':
+    'prefix': 'in'
+    'body': '\\\\int'
+  'infty':
+    'prefix': '\\int'
+    'body': '\\\\infty'
+  'int_':
+    'prefix': '\\infty'
+    'body': '\\\\int'
+  # Arrows:
+  'leftarrow':
+    'prefix': 'lar'
+    'body': '\\\\leftarrow'
+  'longleftarrow':
+    'prefix': '\\leftarrow'
+    'body': '\\\\longleftarrow'
+  'leftarrow_':
+    'prefix': '\\longleftarrow'
+    'body': '\\\\leftarrow'
+  'Leftarrow_':
+    'prefix': 'Lar'
+    'body': '\\\\Leftarrow'
+  'Longleftarrow':
+    'prefix': '\\Leftarrow'
+    'body': '\\\\Longleftarrow'
+  'Leftarrow_':
+    'prefix': '\\Longleftarrow'
+    'body': '\\\\Leftarrow'
+  'rightarrow':
+    'prefix': 'rar'
+    'body': '\\\\rightarrow'
+  'longrightarrow':
+    'prefix': '\\rightarrow'
+    'body': '\\\\longrightarrow'
+  'rightarrow_':
+    'prefix': '\\longrightarrow'
+    'body': '\\\\rightarrow'
+  'Rightarrow':
+    'prefix': 'Rar'
+    'body': '\\\\Rightarrow'
+  'Longrightarrow':
+    'prefix': '\\Rightarrow'
+    'body': '\\\\Longrightarrow'
+  'Rightarrow_':
+    'prefix': '\\Longrightarrow'
+    'body': '\\\\Rightarrow'
+  # Math Fonts
+  'mathbf':
+    'prefix': 'bf'
+    'body': '\\\\mathbf{$1}$0'
+  'mathrm':
+    'prefix': 'rm'
+    'body': '\\\\mathrm{$1}$0'
+  'mathcal':
+    'prefix': 'cal'
+    'body': '\\\\mathcal{$1}$0'
