@@ -6,7 +6,7 @@ export PS1='\u@\h:\w> '
 
 
 # Apt-get update and upgrade
-alias aptup='sudo apt-get update && sudo apt-get upgrade'
+alias aptup='sudo apt-get update && sudo apt-get dist-upgrade'
 
 # Some ls aliases
 alias la='ls -alFh'

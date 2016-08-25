@@ -30,7 +30,7 @@
     'body': '\\\\frac{$0}{}'
   'Equation':
     'prefix': 'eq'
-    'body': '%\n\\\\begin{equation}\n\t$0\n\\\\end{equation}\n%'
+    'body': '%\n\\\\begin{equation}\n$0\n\\\\end{equation}\n%'
 
   # Parentheses
   'left( right)':
