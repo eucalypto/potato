@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>This is my title</title>
+  <meta name="Name?" content="Content?" charset="utf-8">
+  <style media="screen">
+    p {
+      border: 1px solid powderblue;
+      padding: 10px;
+      margin: 30px;
+    }
+    p.error {
+      color: red;
+    }
+
+    /*Tables:*/
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+    }
+    th {
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1 title="This is a hidden message">This is my first Heading, h1</h1>
+<p title="This is a tooltip. It will be shown if the mouse hovers over this element.">
+  This is a paragraph. This is the first of many to come. Let us write some more sentences. This one is nice. The next sentence is not so nice. But dogs are cute. Although cats are also cute and fluffy on the outside, they are evil masterminds and want to rule over the world; or at least over the kitchen.
+</p>
+
+<h2>This is the next heading, h2</h2>
+<p>
+  This is another paragraph.
+</p>
+<p>
+  And another. How to do anything on your computer?<br />Try the all-knowing God of the Internet, <a href="https://www.google.com">Google</a>.
+</p>
+<p>
+  And here an image: <img src="http://www.google.de/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Alternative Text for Google image" width="100" height="38" />
+</p>
+
+
+
+<hr>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+<h4>This is heading 4</h4>
+<h5>This is heading 5</h5>
+<h6>This is heading 6</h6>
+
+<hr>
+
+<pre>
+  This is  a pre-formatted text.
+  I don't want that the     whitespaces and
+  linebreaks are removed.
+
+  So this is good: pre
+</pre>
+
+<hr>
+
+<h1>Styles</h1>
+
+<h2 style="color:blue;">This is a blue heading</h2>
+
+<p style="color:red;"> This is a colorful paragraph. </p>
+
+<p style="font-family:courier; color:orange">
+This is another paragraph.
+</p>
+
+<p style="font-size:200%;">
+  This is a very big paragraph. In fact, it is twice as big as a normal paragraph. This paragraph looks very scary because of it.
+</p>
+
+<p style="text-align:center;">
+This is a centered paragraph; with "text-align:center"
+</p>
+
+<p style="text-align:right; background-color:orange">
+  This is a special paragraph.
+</p>
+
+
+<h1>Text formatting</h1>
+
+<i>italic?</i>
+<b>bold?</b>
+<s>stroked?</s>
+<strong>strong</strong>
+<em>emphasized</em>
+<mark>marked text</mark>
+<small>small text</small>
+<del>deleted text.</del>
+<ins>inserted text</ins>
+Normal<sub>subscript text</sub>
+Normal<sup>superscript text</sup>
+
+<p class="error">
+  This is an error paragraph.
+</p>
+
+<hr>
+
+<h1>Tables</h1>
+
+<table style="width:60%; border-spacing: 5px;">
+  <tr>
+    <th>
+      Firstname
+    </th>
+    <th>
+      Lastname
+    </th>
+    <th>
+      Email
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Abraham
+    </td>
+    <td>
+      Lincoln
+    </td>
+    <td>
+      abe.linc@bla.com
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Gandalf
+    </td>
+    <td>
+      The Grey
+    </td>
+    <td>
+      gand@alf.com
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<h1>Forms</h1>
+
+<form>
+  First Name:<br />
+  <input type="text" name="firstname" value="">
+  <br>
+  Last Name:<br>
+  <input type="text" name="lastname" value="Blabla">
+</form>
+<br>
+
+<form>
+  Buttons to check:<br>
+  <input type="radio" name="gender" value="male" checked="checked"> Male <br>
+  <input type="radio" name="gender" value="female"> Female <br>
+  <input type="radio" name="gender" value="Other"> Other <br>
+</form>
+
+<form class="" action="" method="post">
+  <fieldset>
+    <legend>Personal Information:</legend>
+    First name: <br />
+    <input type="text" name="firstname" value="Gandalf"><br>
+    Last name: <br>
+    <input type="text" name="lastname" value="The Grey"><br><br>
+    <input type="submit" value="Submitt">
+  </fieldset>
+</form>
+<br>
+
+<strong>Different Form elements:</strong><br>
+
+<form class="" action="" method="post">
+  Select form element:<br>
+  <select class="" name="animals">
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="mouse" selected="selected">Mouse</option>
+    <option value="horse">Horse</option>
+  </select>
+  <br>
+  <br>
+
+  Textarea:<br>
+  <textarea name="message" rows="10" cols="80">The quick brown fox jumps over the lazy dog.</textarea>
+</form>
+<br>
+
+<textarea name="name" rows="8" cols="40">This is text</textarea>
+<br>
+
+<button type="button" name="button" onclick='alert("This is Dog!")'>Button!</button>
+
+<hr>
+
+<h2>HTML5 Form elements</h2>
+
+<strong>Datalist</strong>
+<br>
+Provide pre-defined options for fields.
+
+<input type="text" name="name" value="" list="browsers">
+<datalist id="browsers">
+  <option value="Internet Explorer"></option>
+  <option value="Firefox"></option>
+  <option value="Chrome"></option>
+</datalist>
+
+
+</body>
+</html>
