@@ -1,4 +1,4 @@
 Potato
 ======
 
-This is my code repository. It consists of mostly useless code.
+This code repository consists of code that has not found a home in a separate repository.
