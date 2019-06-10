@@ -13,6 +13,8 @@ First, we need to generate the digits of the euler number e. Then we can find th
 
 ### Generate digits of e
 
+The euler number can be defined as an infinite series or sum.
+
 ### Find prime
 
 #### Naive approach
