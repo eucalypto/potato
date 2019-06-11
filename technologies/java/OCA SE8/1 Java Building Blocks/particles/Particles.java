@@ -17,6 +17,7 @@ public class Particles
         System.out.println("The mass is:");
         System.out.println(particle.mass);
         particle.primitiveTypes();
+        particle.nameAllTheThings();
     }
     public void collide(){
     }
@@ -53,5 +54,44 @@ public class Particles
         // char character = "C"; // Does not compile: double quotes denote a string!
         char character = 'c';
         System.out.println(character);
+    }
+
+    public void nameAllTheThings()
+    {
+        // Can we choose any identifiers?
+        // Allowed characters:
+        //  - letters
+        //  - numbers
+        //  - $ (dollar symbol)
+        //  - _ (underscore)
+
+        // BUT: first character must not be a number!
+        // Also, reserved words are not allowed, duh!
+
+        // String 1stPlace; // does not compile! can't start with number!
+        int firstPlace; // works
+        // int ImAnExpert@Java; // does not compile!
+        int _this_is_legal;
+        int this_is_alsoLegal;
+        int _this$is$ridiculous$but$legal_;
+
+        // But wait there's more!
+        // Java supports Unicode!
+
+        int lööps = 4; // does compile
+        int München = 4; // Finally German umlauts!
+        // int is_this_•_legal; // No!  illegal character: '\u2022'
+        int whatAboutThis_8 = 0; // Yes
+        int i_need_more_unicode_Æ_Ë_Ø_Þ_æ_ = 0; // works!
+        int this_is_ridiculous_ð_Ą_Đ_Ħ_ĳ_ = 0;
+        int this_is_a_trap_ĳ = 0; // The 'ĳ' is a single unicode character! Bamboozled!
+        int this_is_allowed_ƹ = 0;
+
+        int how_about_greek_μ_λ_β = 123;
+
+        int i_think_i_have_made_my_point = -1;
+        int theConventionIs;
+        int startWithLowerCaseAndThenCamelCase;
+        // Except classes
     }
 }
