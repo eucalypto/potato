@@ -16,7 +16,7 @@ public class Particles
         Particles particle = new Particles();
         System.out.println("The mass is:");
         System.out.println(particle.mass);
-        particle.numbers();
+        particle.primitiveTypes();
     }
     public void collide(){
     }
@@ -26,8 +26,12 @@ public class Particles
         System.out.println("Propagate!");
     }
 
-    public void numbers()
+    public void primitiveTypes()
     {
+        // What primitive variable types are there in Java?
+        // 8 types:
+        // boolean, byte, short, int, long, float, double, char
+
         boolean truthiness = false; // works!
         byte bite_size = 127; // works
         // byte bite_size1 = 128; // possible lossy conversion from int to byte
@@ -46,8 +50,8 @@ public class Particles
         System.out.println(017); // 15
         System.out.println(0x17); // 23
 
-
-
-
+        // char character = "C"; // Does not compile: double quotes denote a string!
+        char character = 'c';
+        System.out.println(character);
     }
 }
