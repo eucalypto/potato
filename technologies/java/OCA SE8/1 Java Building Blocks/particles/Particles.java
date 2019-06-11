@@ -1,6 +1,11 @@
 package particles;
 public class Particles
 {
+    public Particles()
+    {
+        System.out.println("This is the construction of class 'Particles'");
+    }
+
     public static void main(String[] args)
     {
         java.util.Random r = new java.util.Random();
