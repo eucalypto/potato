@@ -9,4 +9,9 @@ public class Particles
     }
     public void collide(){
     }
+
+    public void propagate()
+    {
+        System.out.println("Propagate!");
+    }
 }
