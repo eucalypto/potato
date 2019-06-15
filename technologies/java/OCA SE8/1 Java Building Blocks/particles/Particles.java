@@ -93,5 +93,36 @@ public class Particles
         int theConventionIs;
         int startWithLowerCaseAndThenCamelCase;
         // Except classes
+        int Public = 134; // Allowed because Java is case sensitive
+    }
+
+    public void variable_declaration_vs_initialization()
+    {
+        int y = 10; // fine
+        int x; // just declaration
+        // int sum = x + y; // compiler error: particles/Particles.java:102: error:
+                // variable x might not have been initialized
+        x = 3; // initialize
+        int sum = x + y; // compiles now
+
+        // how smart is the compiler?
+        boolean check = true;
+        int answer, bamboozle;
+        if (check)
+        {
+            bamboozle = 8;
+            answer = 2;
+        }
+        else
+        {
+            // notice: we don't initialize bamboozle in this else block!
+            answer = 4;
+        }
+        System.out.println(answer); // fo far so good
+        // System.out.println(bamboozle);  // compiler error:
+            // particles/Particles.java:122: error: variable bamboozle might not
+            // have been initialized
+
+
     }
 }
