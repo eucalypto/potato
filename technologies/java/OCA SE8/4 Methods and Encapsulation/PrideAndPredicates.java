@@ -15,6 +15,8 @@ In other words: lambdas can replace an object that implements a functional
 interface.
 */
 
+import java.util.function.Predicate;
+
 public class PrideAndPredicates {
     public static void main(String[] args) {
         int[] numbers = {123, 1, 34, 43, 42, 314, 121, 88};
@@ -28,6 +30,8 @@ public class PrideAndPredicates {
         // prinntable bound as a second parameter. On the other hand,
         // printIfLargerThan() is limited to this one operation.
 
+        System.out.println();
+
         // Now we are doing the same loop as above, but using lambda with
         // printIfCheck().
         for (int number : numbers) {
@@ -39,6 +43,17 @@ public class PrideAndPredicates {
         // This example is very unnecessary! Instead of defining an interface,
         // a member using this interface, and a lambda; we could just have
         // used the if (number > 100) in the loop itself!.
+
+        System.out.println();
+
+        // Java has a built-in functional interface "Predicate" so that we
+        // don't have to write such an interface every time we want to check a
+        // boolean value. See printIfPredicate(). The interface Predicate is
+        // defined in "java.util.function" package.
+
+        for (int number : numbers) {
+            printIfPredicate(number, n -> n > 100);
+        }
 
     }
 
@@ -54,6 +69,10 @@ public class PrideAndPredicates {
         if (bacon.check(num)) System.out.println(num);
     }
 
+
+    static void printIfPredicate(int num, Predicate<Integer> pred) {
+        if (pred.test(num)) System.out.println(num);
+    }
 }
 
 interface TruthChecker {
