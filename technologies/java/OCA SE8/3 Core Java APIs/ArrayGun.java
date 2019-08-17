@@ -35,6 +35,8 @@ class ArrayGun
 
 
         ArrayList list2 = new ArrayList();
+            // ArrayList without further specifications seems to store Object
+            // references
         list2.add("Hello");
         list2.add("there.");
         list2.add(String.valueOf(Boolean.TRUE)); // works fine
@@ -45,5 +47,10 @@ class ArrayGun
         // Note: Recompile with -Xlint:unchecked for details.
 
         System.out.println(list2);
+
+        for (int i = 0; i < list2.size(); i++) {
+            Object tmp = list2.get(i);
+            System.out.println(tmp);
+        }
     }
 }
