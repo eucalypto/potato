@@ -16,7 +16,10 @@ series that defines e. """
 def prime_gen(maxdigits: int):
     maxnumber = 10 ** maxdigits
     candidates = np.array(range(0, maxnumber))
+
     for remove_multiples_of in range(2, int(maxnumber / 2)):
+        if candidates[remove_multiples_of] == 0:
+            continue
         index = 2 * remove_multiples_of
         while index < maxnumber:
             candidates[index] = 0
@@ -26,6 +29,6 @@ def prime_gen(maxdigits: int):
 
 
 if __name__ == '__main__':
-    primes = prime_gen(7)
+    primes = prime_gen(8)
     print(primes[-10:])
     # [99999787, 99999821, 99999827, 99999839, 99999847, 99999931, 99999941, 99999959, 99999971, 99999989]
